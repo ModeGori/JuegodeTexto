@@ -6,5 +6,10 @@ public class Jugador extends Variables {
 	public static int Sed = 100;
 	public static int Energia = 100;
 	public static int EquilibrioMental = 100;
+	public static boolean escapar = false;
+	public static int x;
+	public static int y;
+	
+		
 
 }
