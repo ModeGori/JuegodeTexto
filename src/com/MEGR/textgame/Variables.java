@@ -12,7 +12,7 @@ public class Variables {
 		try {
 			
 		}catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace(); //hola
 		}
 	}
 
