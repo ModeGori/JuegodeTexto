@@ -10,6 +10,9 @@ public class Jugador extends Variables {
 	public static int x;
 	public static int y;
 	
-		
+		public static void Movimiento () {
+			System.out.println("\n Me puedo mover hacia adelante, izquierda o derecha.... ¿Que haré?");
+			boolean a = true;
+		}
 
 }
