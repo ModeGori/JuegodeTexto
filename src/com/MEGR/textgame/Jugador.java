@@ -110,15 +110,15 @@ public class Jugador extends Variables {
 				public static int getEnergia(){
 				return Jugador.Energia;
 			}
-				public static void reducirEqulibrioMental(int a) { //Modificar SaludMental
+				public static void reducirSaludMental(int a) { //Modificar SaludMental
 			    EquilibrioMental -= a; 
 			  }
-				public static void incrementarEquilibrioMental(int a) {
+				public static void incrementarSaludMental(int a) {
 				if (EquilibrioMental <=90){
 					EquilibrioMental += a;
 				}
 			}
-				public static int getEquilibrioMental(){
+				public static int getSaludMental(){
 				return Jugador.EquilibrioMental;
 			}
 
