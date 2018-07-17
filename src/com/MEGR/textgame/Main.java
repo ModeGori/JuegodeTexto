@@ -13,7 +13,7 @@ public class Main extends Variables {
 		
 		System.out.println("\nTe despiertas y sientes una linda bisa que rosa tu rostro suavemente."
 				+ "\nNo recuerdas absolutamente nada, solo te despertaste aqui."
-				+ "\nDespues de un tiempo comienzas a reocrdar y poco a poco detallas el ambiente que te rodea."
+				+ "\nDespues de un tiempo comienzas a recordar y poco a poco detallas el ambiente que te rodea."
 				+ "\nAparentemente estas en un mundo desconocido y piensas que tu mejor opcion es ir lo mas lejos posible y esperar lo mejor."
 				+ "\nDespues de unos minutos comienzas a recodar algo.... Tu nombre:");
 		System.out.println("(Escribe tu nombre)");
@@ -21,7 +21,7 @@ public class Main extends Variables {
 		
 		dormir ();
 		
-		System.out.println("\nOkay, me llamo " + Nombre + ". Que habra pasado antes de despertarme aqui."
+		System.out.println("\nBien, me llamo " + Nombre + ". Que habra pasado antes de despertarme aqui."
 				+ "\nHmmmmm.... estoy confundido.... Igualmente... sere hombre o mujer? (Igualdad de genero)");
 		boolean testgenero = true; 
 		while (testgenero){
