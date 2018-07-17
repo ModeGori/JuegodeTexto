@@ -1,6 +1,5 @@
 package com.MEGR.textgame;
 
-
 public class Jugador extends Variables {
 	public static int Vida = 100;
 	public static int Hambre = 100;
@@ -123,5 +122,10 @@ public class Jugador extends Variables {
 				return Jugador.EquilibrioMental;
 			}
 
-					
-		}
+				public static int getX() {
+					return Jugador.x;
+		  }
+				public static int getY() {
+					return Jugador.y;
+		  }
+}
