@@ -71,7 +71,4 @@ public class Mapa {
 			System.out.println("|\n");
 		}
 	}
-	
-
-
 }
