@@ -49,7 +49,7 @@ public class Mapa {
 					break;
 				case 8: Juego.cripta();
 					break;
-				case 9: Juego.llanura();
+				case 9: Juego.campo();
 					break;
 				default:
 					System.out.println("Bugazo");
