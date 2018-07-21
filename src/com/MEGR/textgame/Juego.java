@@ -495,6 +495,107 @@ public class Juego extends Variables {
 	}
 	
 	public static void cueva () {
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.reducirVida(20);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(5);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nEn tu camino encuentras una cueva aparentemente comoda.");
+			System.out.println("Entras y te hechas a dormir, esperando que pase el terrible clima.");
+			System.out.println("Al pasar una hora, escuchas unos ruidos desde lo rpofundo de una cueva. Un oso aaparece y te ataca haciendo 20 de daño.");
+			System.out.println("Huyes despavorido de la cueva.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			System.out.println("Tu vida baja 20 puntos. Vida: "+Jugador.getVida()+".");
+			
+		} else if (temp < 40) {
+			
+			Jugador.incrementarEnergia(10);
+			Jugador.reducirHambre(10);
+			Jugador.incrementarSed(20);
+			Jugador.incrementarSaludMental(20);
+			
+			System.out.println("\nEn frente de ti, escondida entre los arboles, encuentras una cueva para pasar la noche.");
+			System.out.println("Tomas agua de un pozo de agua clara que esta dentro de la cueva.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else if (temp < 60) {
+			
+			Jugador.incrementarHambre(10);
+			Jugador.incrementarSed(10);
+			Jugador.incrementarEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nEl sol esta al caer y necesito encontrar una cueva para pasar la noche.");
+			System.out.println("Veo una caverna a la distancia, el lugar perfecto para descansar y dormir.");
+			System.out.println("Me acerco y busco en los alrededores por si hay alguna amenaza.");
+			System.out.println("Hay mucha tranquilidad y decido ir a la cueva y dormirme.");
+			System.out.println("La noche pasa y dormi perfectamente. Estaba lloviendo, pero ahora no.");
+			System.out.println("Atrapas un cnejo y lo cocinas para el desayuno.");
+			System.out.println("Continuas la aventura.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 80) {
+			
+			Jugador.incrementarHambre(20);
+			Jugador.incrementarSed(10);
+			Jugador.incrementarEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nConsigues atrapar una buena presa y tomas refugio en una cueva de hielo que encuentras cerca.");
+			System.out.println("Prendes una fogata y comes tu comida. Estas bien protegido en la cueva y duermes al lado de la fogata.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			System.out.println("\nEstas caminando y consigues una roca con una entrada extraña.");
+			System.out.println("Te acercas y encima de la roca esta algo grabado 'Los mortales no han de entrar.'. Que haces?");
+			System.out.println("1. Entrar.");
+			System.out.println("2. Ignorarla y seguir tu camino.");
+			boolean corr = true;
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.reducirVida(40);
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(20);
+				Jugador.reducirSaludMental(30);
+									
+				System.out.println("\nDecides entrar. Algo oa alguien te habla desde las profundidades de la caverna:");
+				System.out.println("'Porque entrassssssste? Pagarassssss por esssssssso.' Te apuñalan en la espalda.");
+				System.out.println("Te despiertas fuera de la caverna, gravemente herido. Aunque mas lento, continuas tu travesia.");
+				System.out.println("Perdiste 40 de vida. Tu vida es: "+Jugador.getVida()+".");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+									
+				System.out.println("\nDecides ignorarla y proseguir.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				System.out.println("\nPor favor responde '1' o '2'.");
+			}
+			}
+			
+		}
 	}
 	
 	public static void castillo () {
