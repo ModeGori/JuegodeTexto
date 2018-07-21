@@ -66,10 +66,10 @@ public class Jugador extends Variables {
 				return escapar;
 				
 				}
-				public static void ReducirVida (int a) { //Modificar Vida
+				public static void reducirVida (int a) { //Modificar Vida
 			    Vida -= a; 
 			  }
-				public static void IncrementarVida(int a) {
+				public static void incrementarVida(int a) {
 				if (Vida <=90){
 					Vida += a;
 				}
