@@ -1,6 +1,7 @@
 package com.MEGR.textgame;
 
 import java.util.Scanner;
+
 import java.util.Random;
 
 public class Juego extends Variables {
@@ -12,7 +13,7 @@ public class Juego extends Variables {
 	public static void main(String args[]){
 		
 		Mapa mainMap = new Mapa(10, 10);
-		Jugador hero = new Jugador (mainMap);
+		Jugador hero = new Jugador(mainMap);
 		Main.start();
 		
 		boolean listo = false;
@@ -223,6 +224,139 @@ public class Juego extends Variables {
 }
 	
 	public static void bosque () {
+		double temp = Math.random()*100;
+		if (temp < 20) {
+			
+			Jugador.incrementarHambre(10);
+			Jugador.incrementarVida(10);
+			Jugador.incrementarSed(10);
+			Jugador.incrementarEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nTe encuentras en un bosque fascinante.");
+			System.out.println("Tomas cobijo debajo de un arbol gigante y consigues agua y algunas frutas.");
+			System.out.println("Terminas pasando la noche en el bosque sin ningun problema. Te levantas y contiunas tu viaje!");
+			System.out.println("Nueva energia: "+Jugador.getEnergia()+"\nNueva salud mental: "+Jugador.getSaludMental()+"\nNuevo nivel de sed y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else if (temp < 40) {
+			
+			System.out.println("\nEncontraste unos hongos en el camino.");
+			System.out.println("Que vas a hacer? 1. Te los comes\t2. Los ignoras.");
+			
+				
+				boolean corr = true;
+				while (corr) {
+				
+					@SuppressWarnings("resource")
+					Scanner temp2 = new Scanner(System.in);
+					String b = temp2.next().toLowerCase();
+					
+				if (b.equals("1")){
+				
+					corr = false;
+					Jugador.reducirVida(10);
+					Jugador.reducirSed(5);
+					Jugador.reducirEnergia(10);
+					Jugador.incrementarHambre(10);
+										
+					System.out.println("\nTe comes los hongos. Te sientes sastisfecho pero al pasar el tiempo un poco e comienza a doler el estomago.");
+					System.out.println("Tu hambre es "+Jugador.getHambre()+" y tu vida se redujo a "+Jugador.getVida()+".");
+				
+				} else if (b.equals("2")){
+					
+					corr = false;
+					Jugador.reducirHambre(10);
+					Jugador.reducirSed(10);
+					Jugador.reducirEnergia(10);
+										
+					System.out.println("\nLos ignoras y sigues tu camino.");
+					System.out.println("Nueva energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nNivel de sed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+					
+					
+				} else {
+					System.out.println("\nElije '1' o '2'.");
+				}
+				
+			
+		}
+			
+		} else if (temp < 60) {
+			
+			System.out.println("\nDespues de unas horas caminando en una colina empinada te encuentras un bosque completamente quemado, Probablemente un incendio le destrozo hace pocos dias.");
+			System.out.println("No te puedes devolver, te tomaria un dia completo regresar al punto donde empezaste.");
+			System.out.println("Decide. Tienes dos opciones:");
+			System.out.println("1. Entrar al bosque quemado.");
+			System.out.println("2. Rodear el perimetro, pero no entrar al bosque y perder mucho tiempo y energia.");
+			
+			boolean corr = true;
+			
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.reducirVida(10);
+				Jugador.incrementarHambre(30);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+				Jugador.reducirSaludMental(30);
+									
+				System.out.println("\nDecides cruzar el bosque por todo el medio, sientes que es la mejor decision.");
+				System.out.println("Te tardas una hora caminando por nada mas que arboles muertos. Pero la diosa de la fortuna te sonrie:");
+				System.out.println("En el viaje encuentras un reno muerto pero cocinado increiblemente y decides comertelo. Tu nuevo nivel de hambre es "+Jugador.getHambre()+".");
+				System.out.println("Sin embargo tu vida se redujo por todo el humo que inhalaste estando en el bosque "+Jugador.getVida()+".");
+				System.out.println("Tu salud mental se redujo a "+Jugador.getSaludMental()+".");
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(30);
+				Jugador.incrementarSaludMental(10);
+									
+				System.out.println("\nDecides tomar el camino largo, rodeando el bosque en ves de entrar por el.");
+				System.out.println("Despues de MUCHO tiempo logras atravesarlo. Desafortunadamente no encontraste comida o agua y gastaste demasiada energia.");
+				System.out.println("Nueva energia: "+Jugador.getEnergia()+"\n:Tu salud mental "+Jugador.getSaludMental()+"\nNuevo nivel de sed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				System.out.println("\nResponde con '1' o '2'.");
+			}
+			}
+		} else if (temp < 80) {
+			
+			Jugador.incrementarHambre(30);
+			Jugador.incrementarVida(30);
+			Jugador.incrementarSed(30);
+			Jugador.incrementarEnergia(30);
+			Jugador.incrementarSaludMental(30);
+			
+			System.out.println("\nDurante el amanecer sigues una luz brillante que miras por el horizonte.");
+			System.out.println("Cuando llegas, te encuentras en un bosque majestuoso que emana una gran luz de color verde que se puede ver en todo el cielo estrellado.");
+			System.out.println("No recuerdas nada al despertar, pero te encuentras en el otro lado del bosque... Que habra pasado?");
+			System.out.println("Te sientes lleno en todos los aspectos. Agradeces tu suerte y continuas tu viaje.");
+			System.out.println("Nueva vida y energia: "+Jugador.getVida()+", "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nTe encuentras en medio de un bosque muy tenebroso.");
+			System.out.println("La atmosfera es muy pesada, LOs arboles se ven como muertos vivientes y te comienzas a marear.");
+			System.out.println("No encuentras ningun camino que te saque de aqui, comienzas a alucinar cosas y corres en panico.");
+			System.out.println("LOgras escapar. Luego de unas horas comienzas a sentirte normal. Sigues en shock por las circunstancias en las que te encontraste.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
 	}
 	
 	public static void rio () {
