@@ -13,7 +13,6 @@ public class Juego extends Variables {
 	public static void main(String args[]){
 		
 		Mapa mainMap = new Mapa(10, 10);
-		Jugador hero = new Jugador(mainMap);
 		Main.start();
 		
 		boolean listo = false;
