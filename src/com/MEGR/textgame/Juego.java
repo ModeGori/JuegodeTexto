@@ -1,7 +1,6 @@
 package com.MEGR.textgame;
 
 import java.util.Scanner;
-
 import java.util.Random;
 
 public class Juego extends Variables {
@@ -12,7 +11,7 @@ public class Juego extends Variables {
 	
 	public static void main(String args[]){
 		
-		Mapa mainMap = new Mapa(10, 10);
+
 		Main.start();
 		
 		boolean listo = false;
@@ -359,6 +358,140 @@ public class Juego extends Variables {
 	}
 	
 	public static void rio () {
+		double temp = Math.random()*100;
+	
+		if (temp < 20) {
+		
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			Jugador.reducirHambre(10);
+			Jugador.incrementarSed(20);
+		
+		System.out.println("\nHay un rio que te bloquea el camino, decides caminar un poco mas y atraversalo con un puente natural que esta cerca.");
+		System.out.println("En el proceso caes pero logras atravesarlo.");
+		System.out.println("Pierdes salud mental y energia.\tSalud mental: "+Jugador.getSaludMental()+"\tEnergia: "+Jugador.getEnergia()+".");
+		System.out.println("Bebes un poco de agua, Sed: "+Jugador.getSed()+".");
+		
+	} else if (temp < 40) {
+		
+		Jugador.incrementarHambre(10);
+		Jugador.incrementarSed(10);
+		Jugador.incrementarEnergia(10);
+		
+		System.out.println("\nEstas en un rio y decides atrapar algun pez.");
+		System.out.println("Luego de un tiempo intentandolo, consigues un buen pez, lo cocinas, lo comes y te quedas a descansar. Te despiertas el dia siguiente.");
+		System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+		
+	} else if (temp < 60) {
+		
+		Jugador.incrementarHambre(20);
+		Jugador.incrementarVida(30);
+		Jugador.incrementarSed(20);
+		Jugador.incrementarEnergia(30);
+		Jugador.incrementarSaludMental(30);
+		
+		System.out.println("\nEncuentras una cascada y decidas inspeccionar la zona. Hay un lago cristalino donde tomas un poco de agua.");
+		System.out.println("Detras de le cascada encuentras una pequeña cueva. De ella emana una fuerte luz que parece un arcoiris.");
+		System.out.println("Dentro de la cueva encuentras un amueleto incustrado en un altar. Tomas el auleto y te sientes lleno de energia.");
+		System.out.println("Al tomarlo el amuleto desaparece. Decides irte y continuar tu aventura.");
+		System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+		
+	} else if (temp < 80) {
+		
+		System.out.println("\nEstas en frente de un rio congelado. Quieres cruzarlo pero notas que la capa es demasiado fina y posiblemente no aguante tu peso.");
+		System.out.println("Tienes dos opciones:");
+		System.out.println("1. Tratar de caminar sobre el rio para llegar al otro lado.");
+		System.out.println("2. Buscar otro camino, aunque pueda estar muy lejos.");
+		
+		boolean corr = true;
+		while (corr) {
+		
+			@SuppressWarnings("resource")
+			Scanner temp2 = new Scanner(System.in);
+			String b = temp2.next().toLowerCase();
+			
+		if (b.equals("1")){
+		
+			corr = false;
+			Jugador.reducirVida(30);
+			Jugador.reducirHambre(10);
+			Jugador.reducirEnergia(30);
+			Jugador.reducirSaludMental(30);
+								
+			System.out.println("\nTratas de caminar sobre el rio congelado, todo beoen, logras llegar a la mitad del camino.");
+			System.out.println("Faltando unos pocos metros para llegar el hielo se rompe justo debajo de tus pies y caes en el agua congelada.");
+			System.out.println("Tratas de subir pero el hielo se sigue rompiendo. Al final logras llegar a tierra");
+			System.out.println("Te estas congelando del frio, pero agradeces a Dios estar aun vivo.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (b.equals("2")){
+			
+			corr = false;
+			Jugador.reducirEnergia(20);
+			Jugador.reducirHambre(10);
+								
+			System.out.println("\nDespeus de casi un dia caminando encuentras un puente que te permite atravesar.");
+			System.out.println("Estas muy cansado pero al menos estas seguro. Tomaste una buena decision.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else {
+			System.out.println("\nResponde con '1' o '2'.");
+		}
+		}
+		
+	} else if (temp < 100){
+		
+		System.out.println("\nEncuentras un puente que te permitira cruzar el rio que tienes en frente. Pero justo en la entrada del puente hay un monstruo grande y verde, posiblemente un Orco bloqueando el camino.");
+		System.out.println("Te comienza a hablar: 'Ven. No te hare daño, no tienes porque preocuparte. Puedes cruzar el puente y continuar'");
+		System.out.println("El Orco es espeluznante. No parece sospecho, pero no sabes si confiar en el.");
+		System.out.println("Tienes dos opciones:");
+		System.out.println("1. Confiar en el orco y cruzar el puente.");
+		System.out.println("2. Darte la vuelta y encontrar otro camino.");
+		
+		boolean corr = true;
+		while (corr) {
+		
+			@SuppressWarnings("resource")
+			Scanner temp2 = new Scanner(System.in);
+			String b = temp2.next().toLowerCase();
+			
+		if (b.equals("1")){
+		
+			corr = false;
+			Jugador.reducirVida(50);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(30);
+								
+			System.out.println("\nComienzas a cruzar el puente, deseando que el Orco no haga nada estupido.");
+			System.out.println("Cuando estas a mitad de camino, el Orco comienza a gritar:");
+			System.out.println("'EN VERDAD PENSASTE QUE NO TE IBA A ATACAR? MORIRAS!. HOY SERAS MI CENA'");
+			System.out.println("Entras en panico y comienzas a correr lo mas rapido posible.");
+			System.out.println("Te pegan 2 veces antes de escapar.Estas muy herido, pudiste decidir algo mejor.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (b.equals("2")){
+			
+			corr = false;
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+								
+			System.out.println("\nEliges irte y no pasar por el puente, comienzas a correr inmediatamente.");
+			System.out.println("El Orco apenas te vio corre se puso a perseguirte pero nunca te pudo alcanzar!. Buena decision!");
+			System.out.println("Desafortunadamente gastaste muchas energias buscando otro camino...");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else {
+			System.out.println("\nElije '1' o '2'.");
+		}
+		}
+		
+	}
 	}
 	
 	public static void cueva () {
