@@ -880,6 +880,106 @@ public class Juego extends Variables {
 	}
 	
 	public static void pantano () {
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(5);
+			
+			System.out.println("\nEl aire huele mal y te encuentras en un hostil y putrido pantano.");
+			System.out.println("Parecio una eternidad, pero lograste salir de el.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else if (temp < 40) {
+			
+			Jugador.reducirVida(20);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(10);
+							
+			
+			System.out.println("\nTe encuentras en un pantano muy espso, una critura viscosa sale de un pozo y te ataca por la espalda.");
+			System.out.println("Casi te ahoga antes de poder darle unas patadas y algunos golpes y quitartelo de encima.");
+			System.out.println("Logras escapar del pantano.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			System.out.println("Tu vida bajo 20 puntos. Vida: "+Jugador.getVida()+".");
+			
+			
+		} else if (temp < 60) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			
+			System.out.println("\nEntras en un pantano y encuentras un bote pequeña flotando en un lago putrido de color verde.");
+			System.out.println("Te montas en el bote y logras cruzar el lago sin nun problema");
+			System.out.println("Te tomo solo 2 horas atravesar el pantano gracias al bote. Te bajas y continuas tu viaje.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 80) {
+			
+			System.out.println("\nEn el medio de un pantano encuentras un altar con una pocion extraña encima de el.");
+			System.out.println("Que deseas hacer?");
+			System.out.println("1. Beber la pocion");
+			System.out.println("2. Dejarla y continuar");
+			
+			boolean corr = true;
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.reducirVida(20);
+				Jugador.reducirHambre(20);
+				Jugador.reducirSed(20);
+				Jugador.incrementarEnergia(10);
+				Jugador.reducirSaludMental(10);
+									
+				System.out.println("\nLa tomas y comienzas a sentirte mal y sin energias. Notas que te pones verde y pierdes la consciencia...");
+				System.out.println("Te despertas un dia despues, conhambre y sed. Llegas a la conclusion de que caiste en estado de coma.");
+				System.out.println("Pierdes 20 de vida. Vida: "+Jugador.getVida()+".");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+									
+				System.out.println("\nSimplemente continuas.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				
+				System.out.println("\nResponde con '1' o '2'.");
+				
+			}
+			}
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirVida(10);
+			Jugador.reducirHambre(20);
+			Jugador.reducirSed(20);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(20);
+			
+			System.out.println("\nTienes tan mala suerte que te caes en un pozo putrido de un pantano.");
+			System.out.println("Vomitas del olor tan putrefacto que queda impregnado en ti.");
+			System.out.println("Te sientes muy mal. Quizas algo te intoxico.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
 
 	}
 	
