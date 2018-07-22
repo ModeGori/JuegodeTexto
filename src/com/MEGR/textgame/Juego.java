@@ -745,6 +745,68 @@ public class Juego extends Variables {
 	}
 	
 	public static void llanura () {
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nEl horizonte se extiende hasta dodne tus ojos te permiten ver, no ves nada mas que una infinita llanura.\n");
+			System.out.println("Sigues caminando a ver si encuentras algo interesante, pero no tienes suerte.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 40) {
+			
+			Jugador.incrementarHambre(10);
+			Jugador.incrementarSed(10);
+			Jugador.incrementarEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nCaminando por una increible llanura encuentras una fogata abandonada.");
+			System.out.println("Sigue encendida, y hay un poco de comida y agua, posiblemente alguien haya acampado aqui hace poco. Pasare aqui la noche.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tAgua y sed: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+							
+		} else if (temp < 60) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nTodo se comienza a poner arenoso mientras mas caminas.");
+			System.out.println("De repente te das cuenta que estas en un desierto, ya no hay vuelta atras, tienes que seguir caminando.");
+			System.out.println("Luego de una gran caminata logras salir  del desierte, pero has quedado muy sediento y hambriento.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSAlud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 80) {
+			
+			Jugador.reducirVida(20);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(20);
+			
+			System.out.println("\nEstas caminando y sientes una brisa extraordinaria en tu rostro, comienzas a caminar con los ojos cerrados. Te tropiezas con una raiz y caes de cabeza en una piedra.");
+			System.out.println("Te levantas 1 hora despues confundido y con un fuerte dolor de cabeza.");
+			System.out.println("Pierdes 20 de vida. Vida: "+Jugador.getVida()+".");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirHambre(20);
+			Jugador.reducirSed(20);
+			Jugador.reducirEnergia(20);
+			
+			System.out.println("\nCuando vas caminando en la llanura, a la lejanias logras ver cientos de estandartes.");
+			System.out.println("Al acercate lo suficiente te das cuenta que son un ejercito de Orcos. Por suerte estas tan lejos que no te pueden ver.");
+			System.out.println("Quizas te cuesta un poco de tiempo pero es la unica opcion. Decides encontrar otro camino.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
+
 	}
 	
 	public static void montaña () {
