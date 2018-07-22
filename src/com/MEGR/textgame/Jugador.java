@@ -1,5 +1,6 @@
 package com.MEGR.textgame;
 
+
 public class Jugador extends Variables {
 	public static int Vida = 100;
 	public static int Hambre = 100;
@@ -9,6 +10,15 @@ public class Jugador extends Variables {
 	public static boolean escapar = false;
 	public static int x;
 	public static int y;
+	
+	Jugador(Mapa a) {  // Nuestra posicion en el mapa
+		y=a.mapArray.length-1;
+		x=(int)(Math.random()*a.mapArray[0].length);
+		if(x==a.mapArray[0].length)
+		{
+			x--;
+		}
+	}
 	
 		public static void Movimiento () {
 			System.out.println("\n Me puedo mover hacia adelante, izquierda o derecha.... ¿Que haré?");
