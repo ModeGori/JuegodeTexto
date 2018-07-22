@@ -984,6 +984,74 @@ public class Juego extends Variables {
 	}
 	
 	public static void cripta () {
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.incrementarHambre(30);
+			Jugador.incrementarSed(30);
+			Jugador.incrementarEnergia(30);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nEncuentras un hoyo en el piso, no sabes proque pero te adentras a investigar.\n");
+			System.out.println(".Dentro del hoyo te das cuentas que estas dentro de unas catacumbas y estas rodeado de puras urnas\n");
+			System.out.println("Entras en panico y corriendo encuentras un grial dorado. Sientes que emana una especie de poder. Decides agarrarlo");
+			System.out.println("Sales y continuas tu aventura.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 40) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nCaminas por un cementerio en medio de la nada.");
+			System.out.println("Comienzas a ver cosas. Tu cerebro distorsiana la realidad y comienzas a correr.");
+			System.out.println("Te despiertas. El sol esta brillando. No estas en el cementerio. No sabes que paso.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 60) {
+			
+			Jugador.reducirVida(30);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(40);
+			
+			System.out.println("\nViajando en el medio de la nada encuentras un bosque, te adentras y ves una pequeña iglesia.");
+			System.out.println("Decides entrar. Apenas lo haces la puerta se tranca bruscamente...");
+			System.out.println("Comienzas a escucha ruidos, ves que hay sangre en el piso y unas personas muertas que comienzan a moverse...");
+			System.out.println("Intentan atraparte, pero forzejeas un poco y logras abrir la puerta.");
+			System.out.println("Un zombie logro herirte, pierdes 30 de vida. Vida: "+Jugador.getVida()+".");
+			System.out.println("Comienzan a correr huyendo del bosque. Estas muy perturbado por esa experiencia.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 80) {
+			
+			Jugador.reducirVida(20);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nEres mordido por una rata cuando estas en un cementiro en la copa de una montaña.");
+			System.out.println("La moridda duele, piensas que esta infectada. La curas lo mas que puedes.");
+			System.out.println("Pierdes 20 de vida. Vida: "+Jugador.getVida()+".");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nEn tu viaje atraviesas un lugar muy extraño, indescriptible para ti. Sientes que alli perdiste algo...");
+			System.out.println("Continuas, pero sientes que algo muy malo esta por suceder...");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
 	}
 	
 	public static void campo () {
