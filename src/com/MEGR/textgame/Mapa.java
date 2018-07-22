@@ -25,8 +25,8 @@ public class Mapa {
 	
 	 static void Ambiente() { 
 		 
-		x = Jugador.getX();
 		y = Jugador.getY();
+		x = Jugador.getX();
 		
 		
 			int temp = Integer.parseInt(movementMapArray[y][x]);
