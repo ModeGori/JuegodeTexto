@@ -599,6 +599,149 @@ public class Juego extends Variables {
 	}
 	
 	public static void castillo () {
+		double temp = Math.random()*100;
+		if (temp < 20) {
+			
+			System.out.println("\nA las lejanias visualizas unas torres con banderas, y al acercarte te das cuenta que es un castillo gigante hecho con piedra.\n");
+			System.out.println("Te posicionas en frente del gran porton, se abre, y un hombre con pelo engro se acerca a ti y te dice:");
+			System.out.println("'Este es el castillo de Lorden. Somos un dominio pacifico. Vienes en son de paz?'");
+			System.out.println("1. 'Si' ");
+			System.out.println("2. 'No' ");
+			
+			
+			boolean corr = true;
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.incrementarVida(20);
+				Jugador.incrementarHambre(10);
+				Jugador.incrementarSed(10);
+				Jugador.incrementarEnergia(20);
+				Jugador.incrementarSaludMental(30);
+									
+				System.out.println("\nEl hombre abre completamente el porton y te deja entrar. La ciudad dentro del castillo esta llena de personas, tiendas y tavernas.");
+				System.out.println("Comienzas a preguntar a vaias personas que es este lugar y porque apareciste magicamente en este mundo pero sin respuestas. Algunas personas hasta se molestan de tu insistencia.");
+				System.out.println("Comes, bebes y duermes dentro de la ciudad, y en la mañana siguiente te sientes muy bien pero tienes que seguir y decides partir.");
+				System.out.println("Tu via se incremento en 20. Tu nuevo nivel de vida es: "+Jugador.getVida()+".");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirVida(10);
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+				Jugador.reducirSaludMental(10);
+									
+				System.out.println("\nEl hombre cierra la puerta. No te dirije ni la palabra. Decides continuar sin la ayuda de esas pateticas personas encerradas en sus paredes.");
+				System.out.println("Tu vida bajo en 10 puntos. Vida: "+Jugador.getVida()+".");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				
+				System.out.println("\nResponde con '1' o '2'.");
+				
+			}
+			}
+			
+			
+		} else if (temp < 40) {
+			
+			Jugador.reducirVida(20);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nTe das cuenta de un castillo a lo lejos, el porton esta abierto asi que decides entrar y encontrar refugio.");
+			System.out.println("En la noche eres atacado por una figura fantasmal, te hiere pero logras escapar por el bien de tu vida.");
+			System.out.println("Las heridas infligidas por el ente te costaron 20 de vida. Tu nueva vida es: "+Jugador.getVida()+".");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+			
+		} else if (temp < 60) {
+			
+			System.out.println("\nEncuentras un gran castillo y deicdes entrar a investigar.");
+			System.out.println("Ya dentro no encuentras ninguna salida, sientes que estas caminando en circuos cuando encuentras una sala extremadamente grande.");
+			System.out.println("Ya quieres irte. Pero en la sala hay dos puertas y tu tienes que elegir alguna: La izquierda o la derecha?");
+			System.out.println("1. Puerta izquierda.");
+			System.out.println("2. Puerta derecha.");
+			
+			boolean corr = true;
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.reducirVida(20);
+				Jugador.reducirHambre(20);
+				Jugador.reducirSed(20);
+				Jugador.reducirEnergia(30);
+				Jugador.reducirSaludMental(30);
+									
+				System.out.println("\nDecides ir por la puerta de la izquierda.");
+				System.out.println("Al entrar, la puerta se cierra y no te puedes devolver. Te das cuenta que el laberinto continua.");
+				System.out.println("Encuentras la salida, pero sientes que estuviste dias o semanas dentro del castillo.");
+				System.out.println("Acabas de salir, pero estas herido y muy cansado.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				System.out.println("Tu vida bajo en 20. Vida: "+Jugador.getVida()+".");
+									
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+				
+				System.out.println("\nCaminas hacia la puerta derecha y la abres.");
+				System.out.println("Inmediatamente te encuentras en las afueras del castillo.");
+				System.out.println("Te preguntas que hubiera pasado si elegias la otra puerta.");
+				System.out.println("Dejas de pensar en eso y continuas con tu aventura.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				System.out.println("\nResponde con '1' o '2'.");
+			}
+			}
+		} else if (temp < 80) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.incrementarEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nDespues de un dia caminando, encuentras un castillo abandonado y decides descansar.");
+			System.out.println("No hay agua ni comida, pero pudiste dormir sin ninguna preocupacion.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nDecides pedir ayuda a un castillo que tienes cerca arriba de una colina.");
+			System.out.println("Apenas te acercas los guardias dentro del castillo comienzan a gritarte que te vayas.");
+			System.out.println("Intentas explicar, gritando, que eres un simple viajero que necesita un poco de ayuda.");
+			System.out.println("Los soldados te disparan unas flechas preventivas y tu decides irte.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
 	}
 	
 	public static void llanura () {
