@@ -1055,6 +1055,104 @@ public class Juego extends Variables {
 	}
 	
 	public static void campo () {
-	}
-	
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(10);
+							
+			System.out.println("\nEsta parte del mundo parece inhabitada por personas. Campos de trigo se extienden por kilometros.\n");
+			System.out.println("Aun con un ecosistema tan bonito, no encuentras ni agua ni comida, y te ves forzado a dormir bajo un arbol.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 40) {
+			
+			Jugador.incrementarVida(20);
+			Jugador.incrementarHambre(20);
+			Jugador.incrementarSed(20);
+			Jugador.incrementarEnergia(20);
+			Jugador.incrementarSaludMental(20);
+			
+			System.out.println("\nMientras caminas por un campo, encuentras un granjero que te dice para ir a su hogar y pasar la noche.");
+			System.out.println("Aceptas la invitacion. Comes, duermes, le agradeces al granjero por todo y en la maña sigues tu viaje.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 60) {
+			
+			Jugador.reducirVida(10);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(20);
+			
+			System.out.println("\nMientras caminas por un campo de trigo eres atacado por espantapajaros vivientes!");
+			System.out.println("Agarras un trozo de amdera del piso y comienzas a pegarles. Tumbas a 2 espantapajaros y luego logras escapar");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			System.out.println("Tu vida baja en 10. Vida: "+Jugador.getVida()+".");
+			
+		} else if (temp < 80) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.incrementarSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.incrementarSaludMental(10);
+			
+			System.out.println("\nEncuentras a un hombre que te preguntas de dodne vienes, ya que nunca te ha visto.");
+			System.out.println("Le explicas que simplemente apareciste aqui y no has podido regresar a casa, el dice que te puede ayudar.");
+			System.out.println("El apunta hacia alla y dice que sigas tu camino si quieres escapar.");
+			System.out.println("Te da un poco de agua, pero sigues teninedo hambre y estas cansado. Ya quieres volver a casa.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			System.out.println("\nEncuentras la casa de un granjero en mitas de la nada. Que quieres hacer?");
+			System.out.println("1. Tocar la puerta y pedir ayuda.");
+			System.out.println("2. Irte y seguir caminando.");
+			
+			boolean corr = true;
+			while (corr) {
+			
+				@SuppressWarnings("resource")
+				Scanner temp2 = new Scanner(System.in);
+				String b = temp2.next().toLowerCase();
+				
+			if (b.equals("1")){
+			
+				corr = false;
+				Jugador.incrementarVida(10);
+				Jugador.incrementarHambre(20);
+				Jugador.incrementarSed(10);
+				Jugador.reducirEnergia(20);
+				Jugador.reducirSaludMental(10);
+									
+				System.out.println("\nTe acercas a la puerta y tocas. Un granjero te dice que si quieres comer y te invita dentro.");
+				System.out.println(".Aceptas y entras. Te sirven muuuucha comida y quedas satisfecho, pero cuando te descuidas el granjero y su esposa comienzan a atacarte");
+				System.out.println("Afortunadamente no sales herido, y logras matarlos con un cuchillo que encuentras en la cocina.");
+				System.out.println("Comienzas a investigar la casa y ves restos de cuerpos por todas partes... eran canibales! Sales corriendo de la casa mientras aguantas las ganas de vomitar.");
+				System.out.println("Despues de esta mala experiencia continuas tu aventura.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+			} else if (b.equals("2")){
+				
+				corr = false;
+				Jugador.reducirHambre(10);
+				Jugador.reducirSed(10);
+				Jugador.reducirEnergia(10);
+									
+				System.out.println("\nTe diste cuenta que irte era la mejor opcion.");
+				System.out.println("Continuas tu camino sin problemas.");
+				System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+				
+				
+			} else {
+				
+				System.out.println("\nResponde con '1' o '2'.");
+				
+			}
+			}
+		}
+}
+
 	}
