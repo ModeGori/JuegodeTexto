@@ -11,7 +11,8 @@ public class Juego extends Variables {
 	
 	public static void main(String args[]){
 		
-
+		Mapa mainmap = new Mapa (10,10);
+		Jugador heroe = new Jugador (mainmap);
 		Main.start();
 		
 		boolean listo = false;
@@ -208,7 +209,7 @@ public class Juego extends Variables {
 				Jugador.reducirSed(10);
 									
 				System.out.println("\nDecides continuar.");
-				System.out.println("DEspues de un tiempo escuchas una explosion a lo lejos y te subes en la copa de un arbol a investigar.");
+				System.out.println("Despues de un tiempo escuchas una explosion a lo lejos y te subes en la copa de un arbol a investigar.");
 				System.out.println("Te das cuenta que la aldea que acabas de ignorar ha sido enterrada en una avalancha gigantesca que surgio en la montañas de los alrededores!");
 				System.out.println("Si hubieras pensado diferente, probablemente estarias muerto. Felicitaciones!");
 				System.out.println("Nueva energia: "+Jugador.getEnergia()+"\nNueva salud mental: "+Jugador.getSaludMental()+"\nNuevo nivel de agua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
