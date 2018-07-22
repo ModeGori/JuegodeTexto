@@ -810,9 +810,77 @@ public class Juego extends Variables {
 	}
 	
 	public static void montaña () {
+		double temp = Math.random()*100;
+		
+		if (temp < 20) {
+			
+			Jugador.reducirVida(10);
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(20);
+			
+			System.out.println("\nDurante una viaje en una montaña muy empinada, te ecuentras en medio de una tormenta de nieve");
+			System.out.println("Eres forzado a detenerte y casi te congelas. Pierdes 10 de vida, 20 de energia y 20 de salud mental.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\tSalud mental: "+Jugador.getSaludMental()+"\tAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			System.out.println("Tu vida bajo en 10. Vida: "+Jugador.getVida()+".");
+			
+			
+		} else if (temp < 40) {
+			
+			Jugador.reducirHambre(10);
+			Jugador.reducirSed(10);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(40);
+			
+			System.out.println("\nVas caminando por el paso de una montaña y te das cuenta de una entidad extraña.");
+			System.out.println("La entidad comienza a perseguirte, tu tratas de huir de ella pero todos tus esfuerzos son en vano.");
+			System.out.println("Pasas toda la noche en panico, hasta que en la mañana la entidad desaparece, justo cuando ya dejas la montaña atras.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 60) {
+			
+			Jugador.incrementarHambre(10);
+			Jugador.incrementarSed(10);
+			Jugador.incrementarEnergia(10);
+			
+			System.out.println("\nViajas por una montaña, se hace de noche y te ves forzado a acampar.");
+			System.out.println("Logras cazar a un ciervo, creas una fogata, lo cocinas y descanzas toda la noche. En la mañana comienzas a descender.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 80) {
+			
+			Jugador.incrementarHambre(10);
+			Jugador.incrementarSed(10);
+			Jugador.reducirEnergia(10);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nCaminando por una montaña, te encuentras a un hombre extraño que se te acerca y te dice que es el 'Hermitaño de la montaña sagrada'.");
+			System.out.println("Le preguntas si te puede ayudar con comida o algo por el estilo, el asiente con su cabeza, y te guia hacia un bosque de pinos.");
+			System.out.println("El hermitaño te guia hacia su humilde morada y te ofrece un buen caldo.");
+			System.out.println("Apenas terminas, el te dice que te vayas rapido, que ningun aventurero deberia de estar cerca de estas montañas en horas de la noche.");
+			System.out.println("Llegas con el al otro lado de la montaña antes de que caiga la noche, en este punto se separan y cada quien va po su camino.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		} else if (temp < 100){
+			
+			Jugador.reducirHambre(20);
+			Jugador.reducirSed(20);
+			Jugador.reducirEnergia(20);
+			Jugador.reducirSaludMental(10);
+			
+			System.out.println("\nNo puedes continuar tu viaje sino escalas una gran montaña que tienes en frente.");
+			System.out.println("Te costara mucho tiempo y energia, pero no tienes otra opcion.");
+			System.out.println("Despues de unos dias, logras atravesar este obstaculo.");
+			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
+			
+		}
+
+
 	}
 	
 	public static void pantano () {
+
 	}
 	
 	public static void cripta () {
