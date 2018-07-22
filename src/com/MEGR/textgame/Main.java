@@ -11,7 +11,7 @@ public class Main extends Variables {
 		System.out.println("Usa el teclado y Enter para interactuar con la interfaz");
 		System.out.println("Escribe tu respuesta y dale a Enter");
 		
-		System.out.println("\nTe despiertas y sientes una linda bisa que rosa tu rostro suavemente."
+		System.out.println("\nTe despiertas y sientes una linda brisa que rosa tu rostro suavemente."
 				+ "\nNo recuerdas absolutamente nada, solo te despertaste aqui."
 				+ "\nDespues de un tiempo comienzas a recordar y poco a poco detallas el ambiente que te rodea."
 				+ "\nAparentemente estas en un mundo desconocido y piensas que tu mejor opcion es ir lo mas lejos posible y esperar lo mejor."
@@ -63,7 +63,7 @@ public class Main extends Variables {
 	}
 	
 	public static void rightstop(){
-		System.out.println("\nNo puedes ir a la derecha.... algo te dice que no hya anda bueno por alla.");
+		System.out.println("\nNo puedes ir a la derecha.... algo te dice que no hay nada bueno por alla.");
 	}
 	
 	public static void leftstop(){
