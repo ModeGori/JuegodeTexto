@@ -738,7 +738,7 @@ public class Juego extends Variables {
 			
 			System.out.println("\nDecides pedir ayuda a un castillo que tienes cerca arriba de una colina.");
 			System.out.println("Apenas te acercas los guardias dentro del castillo comienzan a gritarte que te vayas.");
-			System.out.println("Intentas explicar, gritando, que eres un simple viajero que necesita un poco de ayuda.");
+			System.out.println("Intentas explicar, gritando, que eres un simple viajero que necesitas un poco de ayuda.");
 			System.out.println("Los soldados te disparan unas flechas preventivas y tu decides irte.");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
