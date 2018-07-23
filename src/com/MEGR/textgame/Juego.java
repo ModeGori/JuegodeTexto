@@ -419,7 +419,7 @@ public class Juego extends Variables {
 			Jugador.reducirEnergia(30);
 			Jugador.reducirSaludMental(30);
 								
-			System.out.println("\nTratas de caminar sobre el rio congelado, todo beoen, logras llegar a la mitad del camino.");
+			System.out.println("\nTratas de caminar sobre el rio congelado, todo bien, logras llegar a la mitad del camino.");
 			System.out.println("Faltando unos pocos metros para llegar el hielo se rompe justo debajo de tus pies y caes en el agua congelada.");
 			System.out.println("Tratas de subir pero el hielo se sigue rompiendo. Al final logras llegar a tierra");
 			System.out.println("Te estas congelando del frio, pero agradeces a Dios estar aun vivo.");
@@ -431,7 +431,7 @@ public class Juego extends Variables {
 			Jugador.reducirEnergia(20);
 			Jugador.reducirHambre(10);
 								
-			System.out.println("\nDespeus de casi un dia caminando encuentras un puente que te permite atravesar.");
+			System.out.println("\nDespues de casi un dia caminando encuentras un puente que te permite atravesar.");
 			System.out.println("Estas muy cansado pero al menos estas seguro. Tomaste una buena decision.");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
@@ -445,7 +445,7 @@ public class Juego extends Variables {
 		
 		System.out.println("\nEncuentras un puente que te permitira cruzar el rio que tienes en frente. Pero justo en la entrada del puente hay un monstruo grande y verde, posiblemente un Orco bloqueando el camino.");
 		System.out.println("Te comienza a hablar: 'Ven. No te hare daño, no tienes porque preocuparte. Puedes cruzar el puente y continuar'");
-		System.out.println("El Orco es espeluznante. No parece sospecho, pero no sabes si confiar en el.");
+		System.out.println("El Orco es espeluznante. No parece sospechoso, pero no sabes si confiar en el.");
 		System.out.println("Tienes dos opciones:");
 		System.out.println("1. Confiar en el orco y cruzar el puente.");
 		System.out.println("2. Darte la vuelta y encontrar otro camino.");
@@ -468,7 +468,7 @@ public class Juego extends Variables {
 								
 			System.out.println("\nComienzas a cruzar el puente, deseando que el Orco no haga nada estupido.");
 			System.out.println("Cuando estas a mitad de camino, el Orco comienza a gritar:");
-			System.out.println("'EN VERDAD PENSASTE QUE NO TE IBA A ATACAR? MORIRAS!. HOY SERAS MI CENA'");
+			System.out.println("'EN VERDAD PENSASTE QUE NO TE IBA A ATACAR? MORIRAS!. HOY SERAS MI CENA!'");
 			System.out.println("Entras en panico y comienzas a correr lo mas rapido posible.");
 			System.out.println("Te pegan 2 veces antes de escapar.Estas muy herido, pudiste decidir algo mejor.");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
@@ -482,7 +482,7 @@ public class Juego extends Variables {
 			Jugador.reducirSaludMental(10);
 								
 			System.out.println("\nEliges irte y no pasar por el puente, comienzas a correr inmediatamente.");
-			System.out.println("El Orco apenas te vio corre se puso a perseguirte pero nunca te pudo alcanzar!. Buena decision!");
+			System.out.println("El Orco apenas te vio correr se puso a perseguirte pero nunca te pudo alcanzar!. Buena decision!");
 			System.out.println("Desafortunadamente gastaste muchas energias buscando otro camino...");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
@@ -779,7 +779,7 @@ public class Juego extends Variables {
 			
 			System.out.println("\nTodo se comienza a poner arenoso mientras mas caminas.");
 			System.out.println("De repente te das cuenta que estas en un desierto, ya no hay vuelta atras, tienes que seguir caminando.");
-			System.out.println("Luego de una gran caminata logras salir  del desierte, pero has quedado muy sediento y hambriento.");
+			System.out.println("Luego de una gran caminata logras salir  del desierto, pero has quedado muy sediento y hambriento.");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSAlud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
 		} else if (temp < 80) {
