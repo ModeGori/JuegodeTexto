@@ -92,13 +92,13 @@ public class Juego extends Variables {
 			Jugador.incrementarEnergia(10);
 			Jugador.incrementarSaludMental(20);
 			
-			System.out.println("\nEncuentras uan idea llena de personas.");
+			System.out.println("\nEncuentras una aldea llena de personas.");
 			System.out.println("Apenas llegas a la aldea y caminas por la calle principal todos te comienzan a observar, algo asi como si fueras un heroe.");
 			System.out.println("Un hombre, que dice que es el alcalde se acerca a ti y dice: "+ Nombre +", no?");
 			System.out.println("Porque no te quedas en la taverna y tomas una descanso? La casa invita. Continua tu travesia mañana.");
 			System.out.println("");
 			System.out.println("Dormiste como un bebe. Tu energia es "+Jugador.getEnergia()+".");
-			System.out.println("El desayuno fue increible. Estas lleno. Tu hambre es "+Jugador.getHambre()+"y tu sed es:"+Jugador.getSed()+", y tu salud mental es: "+Jugador.getSaludMental()+".");
+			System.out.println("El desayuno fue increible. Estas lleno. Tu hambre es "+Jugador.getHambre()+" y tu sed es:"+Jugador.getSed()+", y tu salud mental es: "+Jugador.getSaludMental()+".");
 			
 		} else if (temp < 40) {
 			
@@ -1008,7 +1008,7 @@ public class Juego extends Variables {
 			Jugador.reducirSaludMental(10);
 			
 			System.out.println("\nCaminas por un cementerio en medio de la nada.");
-			System.out.println("Comienzas a ver cosas. Tu cerebro distorsiana la realidad y comienzas a correr.");
+			System.out.println("Comienzas a ver cosas. Tu cerebro distorsiona la realidad y comienzas a correr.");
 			System.out.println("Te despiertas. El sol esta brillando. No estas en el cementerio. No sabes que paso.");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nAgua y comida: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
@@ -1036,8 +1036,8 @@ public class Juego extends Variables {
 			Jugador.reducirEnergia(20);
 			Jugador.reducirSaludMental(10);
 			
-			System.out.println("\nEres mordido por una rata cuando estas en un cementiro en la copa de una montaña.");
-			System.out.println("La moridda duele, piensas que esta infectada. La curas lo mas que puedes.");
+			System.out.println("\nEres mordido por una rata cuando estas en un cementerio en la copa de una montaña.");
+			System.out.println("La mordida duele, piensas que esta infectada. La curas lo mas que puedes.");
 			System.out.println("Pierdes 20 de vida. Vida: "+Jugador.getVida()+".");
 			System.out.println("Energia: "+Jugador.getEnergia()+"\nSalud mental: "+Jugador.getSaludMental()+"\nSed y hambre: "+Jugador.getSed()+", "+Jugador.getHambre()+".");
 			
